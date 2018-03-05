@@ -104,7 +104,7 @@ a:hover {
     color: darkred;
     /*adds an underline and changes the color of all links on a page ONLY when the mouse is over the link*/
 }
-```
+~~~
 
 * The **:first-child** pseudo-selector can be applied to narrow the amont of child tags selected
 
