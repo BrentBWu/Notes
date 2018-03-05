@@ -107,8 +107,8 @@ a:hover {
 ~~~html
 <h3>Directions</h3>
 <ol>
-    <li>Mix eggs, sugar...</li>
-    <li>Spread into a...</li>
+    <li>Mix eggs, sugar... </li>
+    <li>Spread into a... </li>
     <li>Bake at 350</li>
 </ol>
 ~~~
@@ -117,5 +117,26 @@ a:hover {
 ol li:first-child {
     color: red;    /* select only the first li tag */
 }
+~~~
+
+
+#### Where to put css tags
+One place you can put CSS is in a style tag that's a child of the head tag.
+
+~~~html
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css"> /*The type attribute lets the browser know that css is coming*/
+        a {
+            color: red; /*Your CSS selectors can be written in between the style opening and closing tags*/
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
 ~~~
 
