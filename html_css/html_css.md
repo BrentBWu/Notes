@@ -63,6 +63,7 @@ like CSS and JavaScript.
 
 #### Absolyte vs. Relative paths
 Absolute paths ask for a file from a specific server
+
 ~~~html
 <a href="http://example.com/legal.html">legal page</a> // abosulte always includes the protocol and server, which need to always be used when linking to pages that are located on another site/server.
 
@@ -74,6 +75,7 @@ Absolute paths ask for a file from a specific server
 #### The early days of style on the web
 When the Web was brand new, there was no separation between HTML and the presentaion of that HTML.
 Tags are selected by creating sth called a selector.
+
 ~~~css
 selector {
     transition-property: value;
@@ -90,6 +92,7 @@ ul li {
 ##### select only li tags that are children of ul tags
 
 * A **pseudo-selector** is a modifier that can be added to a selector to select a tag only when a certain condition has occurred.
+
 ~~~css
 a {
     text-decoration: none; 
@@ -104,6 +107,7 @@ a:hover {
 ```
 
 * The **:first-child** pseudo-selector can be applied to narrow the amont of child tags selected
+
 ~~~html
 <h3>Directions</h3>
 <ol>
