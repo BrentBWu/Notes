@@ -169,3 +169,44 @@ How can we control that spacing?
 Box Model
 ```
 
+#### The Box
+Every tag shown in the body is contained in an invisible rectangle that we'll call **the box**.
+
+~~~html
+<p>Magic cake is one of... </p>
+<p>We also need to stress... </p>
+~~~
+
+##### These twwo paragraph tags are shown as two boxes stacked on top of each other.
+
+```
+**Block-level tags**
+The content of block-level tags take up the entire width of the container.
+The tags that contain this content are all block-level.
+```
+
+```
+**Inline-level tags**
+Inline-level tags don't try to take up more width than they need
+```
+
+The box model
+The **box model** is a way to describe the borders and spacing in between the **boxes** of each tag.
+
+#### There are 4 parts of the box model
+* Content area
+    - The *content area* contains your actual content(text, image, etc.)
+    - The content area will only take up as much vertical space as it needs to display the content inside.
+* Padding
+    - Padding is added to the top, bottom, ot left of the content area.
+* Border
+    - Borders are added around the top, right, bottom, or left of the padding.
+* Margin
+    - Margins are added to the top, right, bottom, or left of the border.
+
+#### How to calculate the size of the box
+The full size of a box after these four properties have been set can be calculated like this:
+
+![boxmodel][boxmodel]
+
+[boxmodel]:https://cl.ly/3H3y2K2w383l
