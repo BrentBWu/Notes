@@ -209,4 +209,4 @@ The full size of a box after these four properties have been set can be calculat
 
 ![boxmodel][boxmodel]
 
-[boxmodel]:https://cl.ly/3H3y2K2w383l
+[boxmodel]:https://cl.ly/3H3y2K2w383l/Image%202018-03-06%20at%203.24.58%20PM.png
