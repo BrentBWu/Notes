@@ -144,3 +144,28 @@ One place you can put CSS is in a style tag that's a child of the head tag.
 </html>
 ~~~
 
+#### Hexadecimal colors
+Each hex color is actually three different parts.
+
+```
+#FFFF00
+first two numbers set the amount of red
+next two set green
+last two set blue
+```
+
+
+### The box model
+#### Our page after changing some styles with css
+
+```
+**Questions** 
+How does our page know how much vertical and horizontal space to put between tags?
+How can we control that spacing?
+```
+
+```
+**Answer**
+Box Model
+```
+
