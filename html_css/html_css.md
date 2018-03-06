@@ -190,19 +190,24 @@ The tags that contain this content are all block-level.
 Inline-level tags don't try to take up more width than they need
 ```
 
-The box model
+##### The box model
 The **box model** is a way to describe the borders and spacing in between the **boxes** of each tag.
 
 #### There are 4 parts of the box model
+
 * Content area
     - The *content area* contains your actual content(text, image, etc.)
     - The content area will only take up as much vertical space as it needs to display the content inside.
+
 * Padding
     - Padding is added to the top, bottom, ot left of the content area.
+
 * Border
     - Borders are added around the top, right, bottom, or left of the padding.
+
 * Margin
     - Margins are added to the top, right, bottom, or left of the border.
+
 
 #### How to calculate the size of the box
 The full size of a box after these four properties have been set can be calculated like this:
@@ -210,3 +215,124 @@ The full size of a box after these four properties have been set can be calculat
 ![boxmodel][boxmodel]
 
 [boxmodel]:https://cl.ly/3H3y2K2w383l/Image%202018-03-06%20at%203.24.58%20PM.png
+
+```
++ content area width
++ padding-left + padding-right
++ border-left + border-right
++ margin-left + marigin-right
+    = the full box width
+```
+
+If we want to put some space aboe and to the right of some text, one option is to adjust the padding.
+
+#### Applying the box model properties
+
+~~~css
+h2 {
+    padding-top: 6px;
+    padding-right: 3px;
+    padding-bottom: 1px;
+    padding-left: 0px;
+}
+
+/*all at once in a clockwise order*/
+
+h2 {
+    padding: 6px 3px 1px 0;
+}
+~~~
+
+If we want ot put some space above and to the right of some text, one option is to adjust the padding.
+
+You'll can apply borders all at once and not specify a side.
+
+~~~css
+h2 {
+    border-width: 6px;
+    border-style: solid;
+    border-color: black;
+}
+
+/*You can also just pick one side and just add a border there.*/
+
+h2 {
+    border: 6px solid black;
+}
+~~~
+
+
+Add margins the same way you add padding...
+
+~~~css
+h2 {
+    margin-top: 6px;
+    margin-right: 0;
+    margin-left: 6px;
+    margin-left: 0;
+}
+
+/*or use the same shortcut syntax as paddiing.*/
+
+h2 {
+    margin: 6px 0 6px 0;
+}
+~~~
+
+#### When should you use padding?
+Padding is used to control the size of a box without adjusting the size of the content inside the box.
+
+![padding][padding]
+
+[padding]:https://cl.ly/26390d2f373E/Image%202018-03-06%20at%204.05.26%20PM.png
+
+
+#### When should you use margin?
+Margin is used to control the space between boxes.
+
+![margin][margin]
+
+[margin]:https://cl.ly/2v1D1l1K433z/Image%202018-03-06%20at%204.08.19%20PM.png
+
+
+#### What we now know:
+* Each tag's content fits in an invisible box
+* Each block-level tag's box takes up an entire line
+* Padding can be used to adjust spacing within a container
+* Margin can be used to adjust spacing between containers
+
+
+#### Default browser styles
+Browsers actually have a default stylesheet for when no custom styles are set.
+
+#### Resetting default browser styles
+Add this to the very top of your CSS file to reset default styles.
+
+~~~css
+html, body, h1, h2, h3, p, ol, ul, li, a {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+/* Include each tag that's in your HTML for that page*/
+~~~
+
+Now, all of the default box properties are reset, and we need to set the box model properties ourselves.
+
+#### A box Model process - Start with the body
+
+The order that you apply the box model properties is personal preference, but here's one approach:
+
+Start from the highest parent element
+This is often **<body>**
+
+~~~css
+body {
+
+}
+~~~
+
+This padding has the effect of pushing all of the children away from the edges of the **<body>**
+
+Next, focus on the heading tags
