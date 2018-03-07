@@ -336,3 +336,54 @@ body {
 This padding has the effect of pushing all of the children away from the edges of the **<body>**
 
 Next, focus on the heading tags
+
+
+
+#### A Box Model process- padding
+Padding is also used to adjust list and list them indentation.
+
+
+## 3.1 CSS selectors
+
+##### Using classes in descendent selectors
+
+Classes can be used interchangeably with tags, so the way descendant selectors work doesn't change.
+??????????????????????????????????????????????????
+
+
+
+
+#### Writing class and type selectors in the right order
+When you're just using type selectors, the order doesn't really matter.
+When you start combining them with class selectors - the older matters.
+
+~~~css
+.nav {
+    padding-left: 0;
+}
+
+ul{
+    padding: 0 0 0 50px;
+}
+
+/*This ul padding overrides the .nav padding because it comes after the .nav in the stylesheet.*/
+~~~
+
+Padding for *.nav* before *ul* rule
+*padding-left: 0;*
+
+Padding for *.nav* after *ul* rule
+*padding-left: 50px;*
+
+#### Generally speaking, **first declare the broadest rules** with type selectors, and then get more specific with class selectors.
+
+~~~css
+ul{
+    padding: 0 0 0 50px;
+}
+
+.nav {
+    padding-left: 0;
+}
+~~~
+
