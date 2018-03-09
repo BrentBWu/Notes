@@ -387,3 +387,146 @@ ul{
 }
 ~~~
 
+This way, the borader rules cascade down and become defaults, and more specific rules can change the defaults.
+
+
+#### Creating a page that lists all recipes
+
+Our recipes.html page will have a list of links to individual recipe pages.
+
+
+
+
+#### Where do you write CSS?
+While CSS can be written inside of a <style> tag in an HTML file, most of the time it's written in a separate file and connected to the HTML file with a **link** tag.
+
+    * The link tag should be a child of the head tag
+    * The link tag is and empty tag, meaning it is written with only and opening tag and has no closing tag.
+
+Since the tag is empty, the way you use it is by setting different **attributes**.
+
+~~~html
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="">
+    /* The rel attribute is short for relationship */
+    /* Setting rel to stylesheet tells the HTML that it should use the linked file to determine page styles */
+    /* The type attribute set to test/css lets the browser know we'ew going to be loading a CSS file */
+    /* The href attribute works just like it does with the <a> tag*/
+</head>
+<body>
+</body>
+</html>
+~~~
+
+
+## divs and layout
+
+### The div tag
+div is short for division, and it's a *block-level tag* that's a generic way to *group related content into sections* on a page.
+
+
+#### Centering with margin auto
+**auto** here means take as much space as you can.
+
+~~~css
+magic-cake {
+  margin: 30px auto 0 auto;  
+}
+~~~
+
+![auto][auto]
+
+[auto]:https://cl.ly/3y0u2602233x/Image%202018-03-07%20at%205.52.22%20PM.png
+
+#### Centering content
+There's two main ways to center things, but the CSS you write depends on what you're centering.
+    **IF** you want to center children *inside* a block-level tag
+    **Then* set the *text-align* of the children to *center*
+
+
+
+
+### 4.1 Content Images
+#### Creating content images
+Content images are created in HTML with the <img> tag,
+
+~~~html
+<img src="images/cake.png" alt="Magic Cake Photo">
+~~~
+
+The alt attribute should contain text that describe the image or the purpose of the image.
+
+
+#### Centering an image inside a block-level tag
+**<img>** is an *inline-level* tag so it can't be centered with text-align.
+Instead, set just that image to **display**: **block** and center it with the **margin: auto** approach.
+
+~~~html
+<div class="header">
+    <img src="images/logo.png" alt="Recipe World Logo">
+</div>
+~~~
+
+~~~css
+.header img {
+    display: block;
+    margin: 0 auto 0 auto;
+}
+~~~
+
+
+#### Uderstanding the background property
+**background-image** can point to a relative or absolute path.
+
+~~~css
+body {
+    background-image: url(images/gobbler.png);
+}
+~~~
+
+**background-position** can be used to position the image in a container.
+
+~~~css
+body {
+    background-position: center left; /*the*/
+}
+~~~
+
+**background-repeat** can be used to repeat tiled images.
+
+~~~css
+body {
+    background-repeat: no-repeat; /*the*/
+}
+~~~
+
+
+
+#### Creating different tiled backgrounds
+
+ We can set different backgrounds for different containers
+ Here, we're using one repeated background for the body, another for the main-content, and another for the divs on the recipes page.
+
+~~~html
+<div class="featured-image">
+    <h3>Featured: Magic Cake</h3>
+</div>
+~~~
+
+~~~css
+.featured-image {
+    width: 630px;
+    height: 246px;
+    background: #ffffff url(images/featured-cake.png) top left no-repeat;
+}
+~~~
+
+
+#### Displaying an image to the side of block-level tags
+
+HTML elements are usually either block-level elements or inline elements. A block-level element occupies the entire space of its parent element(container), thereby creating a block.
+
+By defualt, bloack-level elements begin on new lines, but inline elements can start anywhere in a line.
+
