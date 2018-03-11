@@ -530,3 +530,19 @@ HTML elements are usually either block-level elements or inline elements. A bloc
 
 By defualt, bloack-level elements begin on new lines, but inline elements can start anywhere in a line.
 
+#### Floating images
+
+You might try setting two divs to inline. Turns out, we can't just flip things to inline and then put block-level tags inside of them.
+
+
+## 5.1 Adjusting Font Styles
+
+The **font-family** property is used to set the ideal font and a few fallback options.
+
+~~~css
+body {
+    font-family: Helvetica, Arial, sans-serif;
+} 
+/*The first is the ideal font, not all fonts are installed in all browsers*/
+~~~
+
