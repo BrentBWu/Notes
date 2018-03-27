@@ -546,3 +546,46 @@ body {
 /*The first is the ideal font, not all fonts are installed in all browsers*/
 ~~~
 
+### Adjusting the line height
+**line-height** is like margin for each line in a box.
+
+You can adjust the vertical spacing between different text tags by changing the margin.
+
+
+### Creating web forms
+
+#### Web Forms
+
+basic HTML example
+
+~~~html
+<form>
+    <label>Recipe Name</label>
+    <input type="text" name="">
+    <input type="submit" value="Click to submit" name="">
+</form>
+~~~
+
+![commonform][commonform]
+
+[commonform]:https://cl.ly/2n181s0M2U1P/Image%202018-03-12%20at%204.37.37%20PM.png
+
+#### The for and id attributes
+The value of the **for** attribute in the label should be the same as the value of the id attribute in an input field to associate the label and input.
+
+Each for/id pair has to be unique on the page.
+
+~~~html
+<form>
+    <label for="recipe-name">Recipe Name</label>
+    <input type="text" id="recipe-name" name="">
+    <textarea id="ingredients"></textarea> 
+    textareas also don't need to define types
+</form>
+~~~
+
+~~~css
+input[type=submit] {
+  width: 165px;
+}
+~~~
